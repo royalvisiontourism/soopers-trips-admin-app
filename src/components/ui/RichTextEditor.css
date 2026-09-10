@@ -1,0 +1,298 @@
+.rich-text-editor {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.rich-text-editor--error {
+  border-color: rgb(248 113 113);
+}
+
+.rich-text-toolbar-wrap {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.rich-text-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  padding: 6px 8px;
+}
+
+.rich-text-toolbar-row + .rich-text-toolbar-row {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.rich-text-toolbar-select {
+  padding: 4px 8px;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+  margin-right: 2px;
+}
+
+.rich-text-toolbar button {
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #374151;
+  cursor: pointer;
+}
+
+.rich-text-toolbar button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.rich-text-toolbar button.is-active {
+  background: rgba(0, 0, 0, 0.12);
+  color: #111;
+}
+
+.rich-text-toolbar button:disabled,
+.rich-text-toolbar-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.rich-text-toolbar-sep {
+  width: 1px;
+  height: 18px;
+  background: rgba(0, 0, 0, 0.15);
+  margin: 0 4px;
+}
+
+.rich-text-toolbar-uploading {
+  margin-left: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.rich-text-toolbar-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-right: 4px;
+}
+
+.rich-text-toolbar-size {
+  max-width: 130px;
+}
+
+.rich-text-toolbar-alt-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rich-text-toolbar-alt {
+  width: 180px;
+  max-width: 100%;
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background: white;
+  color: #374151;
+  outline: none;
+}
+
+.rich-text-toolbar-alt:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.rich-text-toolbar-alt::placeholder {
+  color: #9ca3af;
+}
+
+.rich-text-toolbar-alt:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Image bubble menu (shown when an image is selected) */
+.rich-text-image-bubble {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.rich-text-image-bubble-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  margin-right: 4px;
+}
+
+.rich-text-image-bubble button {
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.06);
+  color: #374151;
+  cursor: pointer;
+}
+
+.rich-text-image-bubble button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.rich-text-image-bubble button.is-active {
+  background: rgba(0, 0, 0, 0.14);
+  color: #111;
+}
+
+.rich-text-image-bubble-size {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.rich-text-image-bubble-alt {
+  width: 180px;
+  max-width: 100%;
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  background: #fff;
+  color: #374151;
+  outline: none;
+}
+
+.rich-text-image-bubble-alt:focus {
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+.rich-text-image-bubble-alt::placeholder {
+  color: #9ca3af;
+}
+
+.rich-text-editor .tiptap {
+  min-height: 200px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  outline: none;
+}
+
+.rich-text-editor .tiptap p.is-editor-empty:first-child::before {
+  content: var(--editor-placeholder, "Write your content here…");
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+
+.rich-text-editor .tiptap h1 { font-size: 1.5rem; font-weight: 700; margin: 0.75em 0 0.25em; }
+.rich-text-editor .tiptap h2 { font-size: 1.25rem; font-weight: 600; margin: 0.75em 0 0.25em; }
+.rich-text-editor .tiptap h3 { font-size: 1.125rem; font-weight: 600; margin: 0.5em 0 0.25em; }
+.rich-text-editor .tiptap ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 0.5em 0;
+}
+.rich-text-editor .tiptap ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 0.5em 0;
+}
+.rich-text-editor .tiptap ul li,
+.rich-text-editor .tiptap ol li {
+  display: list-item;
+  margin: 0.25em 0;
+}
+.rich-text-editor .tiptap blockquote { border-left: 3px solid #d1d5db; padding-left: 1rem; margin: 0.5em 0; color: #4b5563; }
+.rich-text-editor .tiptap a { color: #2563eb; text-decoration: underline; }
+.rich-text-editor .tiptap img {
+  max-width: 100%;
+  height: auto;
+  min-height: 48px;
+  display: block;
+  border-radius: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Image alignment */
+.rich-text-editor .tiptap img[data-align="left"] {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.rich-text-editor .tiptap img[data-align="right"] {
+  float: right;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+.rich-text-editor .tiptap img[data-align="center"] {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.rich-text-editor .tiptap img[data-full-width="true"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.rich-text-editor .tiptap p { margin: 0.25em 0; }
+.rich-text-editor .tiptap hr { border: none; border-top: 1px solid #d1d5db; margin: 1em 0; }
+.rich-text-editor .tiptap table { border-collapse: collapse; width: 100%; margin: 0.5em 0; }
+.rich-text-editor .tiptap th,
+.rich-text-editor .tiptap td { border: 1px solid #d1d5db; padding: 6px 10px; text-align: left; }
+.rich-text-editor .tiptap th { background: rgba(0, 0, 0, 0.05); font-weight: 600; }
+
+.rich-text-editor--fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+.rich-text-editor--fullscreen .tiptap {
+  flex: 1;
+  min-height: 200px;
+  max-height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.rich-text-editor .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
