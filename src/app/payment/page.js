@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import PaymentClient from "./payment-client";
 
 export const metadata = {
-  title: "Payment | Royal Vision Admin",
+  title: "Payment | Soopers Trips Admin",
   robots: { index: false, follow: false, noindex: true, nofollow: true },
 };
 

@@ -24,13 +24,13 @@ export default function Topbar({ onMenuClick }) {
 
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2 rounded-2xl border border-border bg-surface px-3 py-2">
-            <div className="relative h-8 w-8 overflow-hidden rounded-full bg-muted">
+            <div className="relative h-8 w-20 overflow-hidden rounded-lg bg-black">
               <Image
                 src={`/img/general/logo.png${process.env.NEXT_PUBLIC_LOGO_VERSION ? `?v=${process.env.NEXT_PUBLIC_LOGO_VERSION}` : ""}`}
-                alt="Royal Vision"
+                alt="Soopers Trips"
                 fill
-                sizes="32px"
-                className="object-contain p-1"
+                sizes="80px"
+                className="object-contain"
                 unoptimized
               />
             </div>
