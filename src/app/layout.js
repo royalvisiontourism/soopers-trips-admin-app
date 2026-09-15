@@ -9,8 +9,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Royal Vision Floating Restaurant - Admin",
-  description: "Royal Vision Floating Restaurant Admin Panel",
+  title: "Soopers Trips - Admin",
+  description: "Soopers Trips Tourism L.L.C Admin Panel",
   icons: {
     icon: [
       { url: '/img/general/logo.png', type: 'image/png' },

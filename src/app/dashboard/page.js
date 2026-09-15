@@ -106,7 +106,7 @@ export default function DashboardHome() {
         <div>
           <h1 className="text-2xl font-semibold text-foreground">Dashboard</h1>
           <p className="mt-1 text-sm text-[color:var(--color-light-1)]">
-            Royal Vision Floating Restaurant — Overview of products and bookings.
+            Soopers Trips Tourism L.L.C — Overview of products and bookings.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">

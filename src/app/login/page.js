@@ -39,9 +39,9 @@ export default function LoginPage() {
       <div className="mx-auto flex min-h-screen max-w-6xl items-center justify-center px-4 py-10">
         <div className="w-full max-w-md rounded-3xl border border-border bg-surface p-6 shadow-sm">
           <div className="mb-6">
-            <h1 className="text-2xl font-semibold text-foreground">Royal Vision Admin</h1>
+            <h1 className="text-2xl font-semibold text-foreground">Soopers Trips Admin</h1>
             <p className="mt-1 text-sm text-[color:var(--color-light-1)]">
-              Sign in to manage Floating Restaurant.
+              Sign in to manage tours and bookings.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function LoginPage() {
 
           <div className="mt-5 text-center text-sm text-[color:var(--color-light-1)]">
             Need access?{" "}
-            <a className="font-semibold text-primary" href="mailto:info@royalvisiondubai.com">
+            <a className="font-semibold text-primary" href="mailto:reservation@soopers-trips.com">
               Contact support
             </a>
           </div>
