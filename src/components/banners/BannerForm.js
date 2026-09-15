@@ -99,10 +99,7 @@ export default function BannerForm({ initialValues, submitting, onSubmit, submit
   const validate = () => {
     const errs = {};
 
-    // Title is always required
-    if (!title.trim()) {
-      errs.title = "Title is required";
-    } else if (title.trim().length > 160) {
+    if (title.trim().length > 160) {
       errs.title = "Title must be at most 160 characters";
     }
 
@@ -164,7 +161,7 @@ export default function BannerForm({ initialValues, submitting, onSubmit, submit
         {/* Title */}
         <div className="md:col-span-2">
           <label className="block text-sm font-medium text-foreground">
-            Title <span className="text-red-500">*</span>
+            Title
           </label>
           <input
             value={title}
