@@ -44,7 +44,7 @@ export default function BannersPage() {
   const totalPages = useMemo(() => Math.max(Math.ceil(total / limit) || 1, 1), [total, limit]);
 
   const openDeleteModal = (banner) => {
-    setDeleteTarget({ id: banner._id, title: banner.title });
+    setDeleteTarget({ id: banner._id, title: banner.title?.trim() || "Untitled banner" });
   };
 
   const closeDeleteModal = useCallback(() => {
@@ -162,7 +162,7 @@ export default function BannersPage() {
                         href={`/dashboard/banners/${encodeURIComponent(b._id)}`}
                         className="font-medium text-foreground hover:underline"
                       >
-                        {b.title}
+                        {b.title?.trim() || "Untitled banner"}
                       </Link>
                       {b.subtitle ? (
                         <div className="mt-1 line-clamp-1 text-xs text-[color:var(--color-light-1)]">{b.subtitle}</div>

@@ -20,13 +20,13 @@ export default function Sidebar({ open, onClose }) {
   const pathname = usePathname();
 
   const support = {
-    emails: ["info@royalvisiondubai.com", "contact@royalvisiondubai.com"],
+    emails: ["reservation@soopers-trips.com"],
     phones: ["+971525049000", "+971552446915"],
-    address: "Al Khaleej Center - Office No 414 4th Floor - Bur Dubai - Dubai",
+    address: "Al Khaleej Centre, Office No. 414, Bur Dubai, Dubai, UAE",
     socials: [
       {
         label: "Instagram",
-        href: "https://www.instagram.com/royalvisionfloatingrestaurant/",
+        href: "https://www.instagram.com/soopers_trips_tourism",
         icon: (
           <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
             <path
@@ -38,7 +38,7 @@ export default function Sidebar({ open, onClose }) {
       },
       {
         label: "Facebook",
-        href: "https://www.facebook.com/profile.php?id=61587719113160",
+        href: "https://www.facebook.com/share/1DBz1xViJq/",
         icon: (
           <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
             <path
@@ -50,7 +50,7 @@ export default function Sidebar({ open, onClose }) {
       },
       {
         label: "YouTube",
-        href: "https://www.youtube.com/@THEROYALVISIONFLOATINGRESTAURA",
+        href: "https://youtube.com/@sooperstripstourism",
         icon: (
           <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
             <path
@@ -62,7 +62,7 @@ export default function Sidebar({ open, onClose }) {
       },
       {
         label: "TikTok",
-        href: "https://www.tiktok.com/@theroyalvisionfloatingre?lang=en",
+        href: "https://www.tiktok.com/@SOOPERS_TRIPS_TOURISM",
         icon: (
           <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
             <path
@@ -92,20 +92,20 @@ export default function Sidebar({ open, onClose }) {
         aria-label="Sidebar"
       >
         <div className="flex items-center justify-between gap-3 px-2">
-          <Link href="/dashboard" className="flex items-center gap-3">
-            <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-muted">
+          <Link href="/dashboard" className="flex min-w-0 items-center gap-3">
+            <div className="relative h-12 w-36 shrink-0 overflow-hidden rounded-lg bg-black">
               <Image
                 src={`/img/general/logo.png${process.env.NEXT_PUBLIC_LOGO_VERSION ? `?v=${process.env.NEXT_PUBLIC_LOGO_VERSION}` : ""}`}
-                alt="Royal Vision Floating Restaurant"
+                alt="Soopers Trips"
                 fill
-                className="object-contain p-1"
+                className="object-contain"
                 priority
                 unoptimized
               />
             </div>
             <div className="leading-tight">
-              <div className="text-sm font-semibold text-foreground">Royal Vision</div>
-              <div className="text-xs text-[color:var(--color-light-1)]">Floating Restaurant</div>
+              <div className="text-sm font-semibold text-foreground">Soopers Trips</div>
+              <div className="text-xs text-[color:var(--color-light-1)]">Admin</div>
             </div>
           </Link>
 
@@ -152,7 +152,7 @@ export default function Sidebar({ open, onClose }) {
           <div className="rounded-2xl border border-border bg-primary-soft p-4 text-sm">
             <div className="font-semibold text-foreground">Support</div>
             <div className="mt-1 text-xs text-[color:var(--color-light-1)]">
-              Need help? Contact Royal Vision Floating Restaurant.
+              Need help? Contact Soopers Trips Tourism L.L.C.
             </div>
 
             <div className="mt-3 space-y-2 text-xs">
