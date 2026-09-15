@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Soopers Trips - Admin",
-  description: "Soopers Trips Tourism L.L.C Admin Panel",
+  description: "Soopers Trips Admin Panel",
   icons: {
     icon: [
       { url: '/img/general/logo.png', type: 'image/png' },
